@@ -1,34 +1,88 @@
-# Calculator Application
+# Calculator Project
 
-This project is a simple Java-based calculator with basic arithmetic operations: addition, subtraction, multiplication, and division. It also includes unit tests to verify the functionality of the calculator.
-
----
+A simple Java calculator implementation that provides basic arithmetic operations with corresponding unit tests.
 
 ## Features
 
-The `Calculator` class provides the following methods:
-- `add(int a, int b)` - Returns the sum of `a` and `b`.
-- `subtract(int a, int b)` - Returns the difference between `a` and `b`.
-- `multiply(int a, int b)` - Returns the product of `a` and `b`.
-- `divide(int a, int b)` - Returns the quotient of `a` and `b`. Throws `IllegalArgumentException` if `b` is zero.
+- Basic arithmetic operations:
+  - Addition
+  - Subtraction
+  - Multiplication
+  - Division (with zero division handling)
 
----
+## Project Structure
 
-## Tests
+```
+.
+├── Calculator.java       # Main calculator implementation
+└── CalculatorTest.java   # Unit tests for calculator
+```
 
-Unit tests for the `Calculator` class are written using **TestNG**. The test methods cover the following cases:
-- Addition: Verifies that two numbers are added correctly.
-- Subtraction: Verifies that the difference between two numbers is correct.
-- Multiplication: Verifies that two numbers are multiplied correctly.
-- Division: Verifies that one number is divided by another correctly.
-- Division by Zero: Ensures that dividing by zero throws an `IllegalArgumentException`.
+## Technical Requirements
 
-### Example Test Cases
+- Java 8 or higher
+- JUnit/TestNG for running tests
 
-- **Addition Test**
-  ```java
-  @Test
-  public void testAdd() {
-      Calculator calculator = new Calculator();
-      assertEquals(5, calculator.add(2, 3), "2 + 3 should equal 5");
-  }
+## Installation
+
+1. Clone the repository
+2. Make sure you have Java installed on your system
+3. Set up your preferred Java IDE (Eclipse, IntelliJ IDEA, etc.)
+4. Import the project into your IDE
+
+## Usage
+
+The Calculator class provides the following methods:
+
+```java
+Calculator calculator = new Calculator();
+
+// Addition
+int sum = calculator.add(2, 3);        // Returns 5
+
+// Subtraction
+int difference = calculator.subtract(3, 2);  // Returns 1
+
+// Multiplication
+int product = calculator.multiply(2, 3);     // Returns 6
+
+// Division
+int quotient = calculator.divide(6, 3);      // Returns 2
+
+// Division by zero throws IllegalArgumentException
+calculator.divide(6, 0);  // Throws IllegalArgumentException
+```
+
+## Testing
+
+The project includes a comprehensive test suite in `CalculatorTest.java`. The tests cover:
+
+- Basic arithmetic operations
+- Edge cases
+- Division by zero exception handling
+
+To run the tests:
+
+1. Make sure you have TestNG configured in your project
+2. Run `CalculatorTest.java` as a TestNG test
+
+## Error Handling
+
+- The calculator handles division by zero by throwing an `IllegalArgumentException`
+- All operations work with integer values only
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
+
+## Contact
+
+For any questions or concerns, please open an issue in the repository.
