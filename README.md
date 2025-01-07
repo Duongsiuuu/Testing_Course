@@ -1,6 +1,8 @@
 # Calculator Project
 
 A simple Java calculator implementation that provides basic arithmetic operations with corresponding unit tests.
+![Screenshot (391)](https://github.com/user-attachments/assets/987622bf-2d8a-44ac-bfcf-cd44a8ebad5a)
+
 
 ## Features
 
